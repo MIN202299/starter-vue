@@ -6,6 +6,9 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 
+// unocss
+import UnoCSS from 'unocss/vite'
+
 // vue def tools
 import VueDevTools from 'vite-plugin-vue-devtools'
 
@@ -41,6 +44,8 @@ export default defineConfig({
       include: [/\.vue$/, /\.vue\?vue/],
       dts: 'src/components.d.ts',
     }),
+    // https://unocss.dev/integrations/vite
+    UnoCSS(),
     // https://github.com/webfansplz/vite-plugin-vue-devtools
     VueDevTools(),
 

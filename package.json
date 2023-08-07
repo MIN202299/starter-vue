@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --port 3345 --open",
+    "dev": "vite --port 3346 --open",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -12,11 +12,13 @@
     "postinstall": "npx simple-git-hooks"
   },
   "dependencies": {
+    "@unocss/reset": "^0.54.1",
     "@vueuse/core": "^10.3.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@dcwjoy/eslint-config": "^0.39.30",
+    "@iconify-json/material-symbols": "^1.1.54",
     "@types/node": "^20.4.8",
     "@vitejs/plugin-vue": "^4.2.3",
     "add": "^2.0.6",
@@ -25,6 +27,7 @@
     "lint-staged": "^13.2.3",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.0.2",
+    "unocss": "^0.54.1",
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.5",

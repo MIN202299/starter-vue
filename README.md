@@ -11,6 +11,7 @@ This template should help get you started developing with Vue 3 and TypeScript i
 - auto import component
 - eslint check before commit
 - support vueuse
+- support unocss
 
 - future
 - unocss ?
