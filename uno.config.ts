@@ -13,7 +13,7 @@ import {
 export default defineConfig({
   presets: [
     presetUno(),
-    presetAttributify(), // react jsx 暂时不使用属性模式
+    presetAttributify(),
     presetTypography(),
     presetWebFonts({
       provider: 'google',

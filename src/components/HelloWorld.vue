@@ -9,7 +9,9 @@ const count = ref(0)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 animate-bounce-alt animate-duration-1s animate-count-infinite text-blue>
+    {{ msg }}
+  </h1>
   <h2>vue use {{ `x: ${x}, y:${y}` }}</h2>
   <div class="card">
     <button type="button" @click="count++">

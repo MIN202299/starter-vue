@@ -7,7 +7,7 @@ const { style } = useDraggable(box$, {
 </script>
 
 <template>
-  <div ref="box$" :style="style" fixed bg-red w-40 h-40 cursor-pointer grid-center text-white select-none shadow-lg>
+  <div ref="box$" :style="style" fixed grid-center h-40 w-40 cursor-pointer select-none bg-red text-white shadow-lg>
     <div i-material-symbols:emoji-people text="amber 2em" />
     drag me
   </div>
