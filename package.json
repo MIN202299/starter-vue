@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite --port 3346 --open",
+    "dev": "vite --port 3346 --open --host",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
@@ -14,7 +14,9 @@
   "dependencies": {
     "@unocss/reset": "^0.54.1",
     "@vueuse/core": "^10.3.0",
-    "vue": "^3.3.4"
+    "axios": "^1.6.2",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@dcwjoy/eslint-config": "^0.39.30",

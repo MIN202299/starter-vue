@@ -16,9 +16,9 @@ export default defineConfig({
     presetAttributify(),
     presetTypography(),
     presetWebFonts({
-      provider: 'google',
+      provider: 'none',
       fonts: {
-        sans: 'Roboto',
+        sans: ['Source Han Sans'],
         mono: ['Fira Code', 'Fira Mono:400,700'],
       },
     }),
