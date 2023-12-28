@@ -52,8 +52,12 @@ async function handleScan() {
     if (!devices || !devices.length || !html5QrCode)
       return
 
+    const camera = import.meta.env.MODE === 'development'
+      ? devices[0].id
+      : { facingMode: 'environment' }
+
     html5QrCode.start(
-      devices[0].id,
+      camera,
       {
         fps: 10,
         qrbox: {
@@ -152,13 +156,15 @@ function stopScanAnimation() {
     ctx.clearRect(0, 0, width, height)
   }
 }
-
+const user = ref('')
 async function writeOff(id: string) {
   loading.value = true
   errorMsg.value = ''
+  user.value = ''
   try {
-    const { data, code } = await request.put(`/coupon/writeOffs/${id}`) as Response
+    const { data, code } = await request.put(`/coupon/writeOffs/${id}`) as Response<{ user: string; msg: string }>
     console.log(data, code)
+    user.value = data.user
   }
   catch (err: any) {
     console.log(err)
@@ -203,15 +209,15 @@ async function writeOff(id: string) {
         <div v-else ma text="center" :class="!errorMsg ? 'text-green' : 'text-red-500'">
           <div ma text-2em :class="!errorMsg ? 'i-clarity:success-standard-solid' : 'i-clarity:error-standard-solid'" />
           <div mt-2>
-            {{ !errorMsg ? '核销成功' : errorMsg }}
+            <div>{{ user ? `用户：${user}` : '' }}</div>
+            <div>{{ !errorMsg ? '核销成功' : errorMsg }}</div>
           </div>
         </div>
       </div>
     </div>
 
     <button
-
-      :class="scanning ? 'bottom-20 bg-red-500' : 'bottom-20'"
+      :class="scanning ? 'bottom-20 bg-red-500' : 'bottom-40'"
       top-auto transition-all a-center btn
       @click="handleScan"
     >

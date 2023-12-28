@@ -7,7 +7,7 @@ export interface Response<T = unknown> {
 }
 // https://dropletonverse.com/api
 
-const baseURL = import.meta.env.MODE
+const baseURL = import.meta.env.MODE === 'development'
   ? 'http://localhost:3000'
   : ' https://dropletonverse.com/api'
 
