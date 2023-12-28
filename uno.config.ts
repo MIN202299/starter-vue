@@ -29,6 +29,8 @@ export default defineConfig({
   ],
   shortcuts: [
     { 'grid-center': 'grid place-items-center' },
+    { btn: 'outline-none p-2 bg-blue-500 rounded text-white shadow-sm hover:brightness-110 active:brightness-90 cursor-pointer' },
+    { 'a-center': 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2' },
   ],
   rules: [],
   transformers: [

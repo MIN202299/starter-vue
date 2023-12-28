@@ -1,7 +1,18 @@
 import axios from 'axios'
 
+export interface Response<T = unknown> {
+  code: number
+  data: T
+  timestamp: number
+}
+// https://dropletonverse.com/api
+
+const baseURL = import.meta.env.MODE
+  ? 'http://localhost:3000'
+  : ' https://dropletonverse.com/api'
+
 export const request = axios.create({
-  baseURL: 'http://192.168.2.125:3000',
+  baseURL,
   timeout: 5000,
 })
 

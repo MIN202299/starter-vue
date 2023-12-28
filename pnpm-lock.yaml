@@ -14,6 +14,9 @@ dependencies:
   axios:
     specifier: ^1.6.2
     version: 1.6.2
+  gsap:
+    specifier: ^3.12.4
+    version: 3.12.4
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -25,9 +28,15 @@ devDependencies:
   '@dcwjoy/eslint-config':
     specifier: ^0.39.30
     version: 0.39.30(eslint@8.46.0)(typescript@5.0.2)
+  '@iconify-json/clarity':
+    specifier: ^1.1.12
+    version: 1.1.12
   '@iconify-json/material-symbols':
     specifier: ^1.1.54
     version: 1.1.54
+  '@iconify-json/svg-spinners':
+    specifier: ^1.1.2
+    version: 1.1.2
   '@types/node':
     specifier: ^20.4.8
     version: 20.4.8
@@ -46,9 +55,15 @@ devDependencies:
   esno:
     specifier: ^0.17.0
     version: 0.17.0
+  html5-qrcode:
+    specifier: ^2.3.8
+    version: 2.3.8
   lint-staged:
     specifier: ^13.2.3
     version: 13.2.3
+  sass:
+    specifier: ^1.69.5
+    version: 1.69.5
   simple-git-hooks:
     specifier: ^2.9.0
     version: 2.9.0
@@ -66,7 +81,7 @@ devDependencies:
     version: 0.25.1(vue@3.3.4)
   vite:
     specifier: ^4.4.5
-    version: 4.4.5(@types/node@20.4.8)
+    version: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
   vite-plugin-vue-devtools:
     specifier: 1.0.0-beta.6
     version: 1.0.0-beta.6(@types/node@20.4.8)(pug@3.0.2)(vite@4.4.5)
@@ -982,8 +997,20 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@iconify-json/clarity@1.1.12:
+    resolution: {integrity: sha512-Qho+7l2znCxMlmNfNRk3LFsXJZX1d8H8v9q+UIkzuiHuS4YI3tl5SpYrPQ4HdhGnzAJbOXhGBb1JPL+mgqc0Ow==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/material-symbols@1.1.54:
     resolution: {integrity: sha512-10DL3dbp5/at3D55df4L5geM+vNf7v/SsF3YHTTN49xWSXGQVWRDEr508RmbCJxUQ1TZb3dHU/n/4VQDbBudCA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/svg-spinners@1.1.2:
+    resolution: {integrity: sha512-Aab6SqkORaTJ1W+ooufn6C8BsBitrn3uk8iRQLPA6pjhyvQAhkKCGMctyXIL5ZjrycnoFVsZ4mx7KnwEMra8qg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
@@ -1598,7 +1625,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.1
       magic-string: 0.30.2
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1612,7 +1639,7 @@ packages:
       birpc: 0.2.12
       estree-walker: 2.0.2
       magic-string: 0.30.2
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
       vite-hot-client: 0.2.1(vite@4.4.5)
     dev: true
 
@@ -1623,7 +1650,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
       vue: 3.3.4
     dev: true
 
@@ -3274,6 +3301,10 @@ packages:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
     dev: true
 
+  /gsap@3.12.4:
+    resolution: {integrity: sha512-1ByAq8dD0W4aBZ/JArgaQvc0gyUfkGkP8mgAQa0qZGdpOKlSOhOf+WNXjoLimKaKG3Z4Iu6DKZtnyszqQeyqWQ==}
+    dev: false
+
   /gzip-size@6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
     engines: {node: '>=10'}
@@ -3339,6 +3370,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /html5-qrcode@2.3.8:
+    resolution: {integrity: sha512-jsr4vafJhwoLVEDW3n1KvPnCCXWaQfRng0/EEYk1vNcQGcG/htAdhJX0be8YyqMoSz7+hZvOZSTAepsabiuhiQ==}
+    dev: true
+
   /htmlparser2@8.0.2:
     resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
     dependencies:
@@ -3361,6 +3396,10 @@ packages:
   /ignore@5.2.4:
     resolution: {integrity: sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==}
     engines: {node: '>= 4'}
+    dev: true
+
+  /immutable@4.3.4:
+    resolution: {integrity: sha512-fsXeu4J4i6WNWSikpI88v/PcVflZz+6kMhUfIwc5SY+poQRPnaf5V7qds6SUyUN3cVxEzuCab7QIoLOQ+DQ1wA==}
     dev: true
 
   /import-fresh@3.3.0:
@@ -4528,6 +4567,16 @@ packages:
       is-regex: 1.1.4
     dev: true
 
+  /sass@1.69.5:
+    resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.4
+      source-map-js: 1.0.2
+    dev: true
+
   /scule@1.0.0:
     resolution: {integrity: sha512-4AsO/FrViE/iDNEPaAQlb77tf0csuq27EsVpy6ett584EcRTp6pTDLoGWVxCD77y5iU5FauOvhsI4o1APwPoSQ==}
     dev: true
@@ -5126,7 +5175,7 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
     dev: true
 
   /vite-plugin-inspect@0.7.35(vite@4.4.5):
@@ -5146,7 +5195,7 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       sirv: 2.0.3
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -5163,7 +5212,7 @@ packages:
       birpc: 0.2.12
       execa: 7.2.0
       sirv: 2.0.3
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
       vite-plugin-inspect: 0.7.35(vite@4.4.5)
       vite-plugin-vue-inspector: 3.5.0(vite@4.4.5)
     transitivePeerDependencies:
@@ -5188,12 +5237,12 @@ packages:
       kolorist: 1.8.0
       magic-string: 0.30.2
       shell-quote: 1.8.1
-      vite: 4.4.5(@types/node@20.4.8)
+      vite: 4.4.5(@types/node@20.4.8)(sass@1.69.5)
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite@4.4.5(@types/node@20.4.8):
+  /vite@4.4.5(@types/node@20.4.8)(sass@1.69.5):
     resolution: {integrity: sha512-4m5kEtAWHYr0O1Fu7rZp64CfO1PsRGZlD3TAB32UmQlpd7qg15VF7ROqGN5CyqN7HFuwr7ICNM2+fDWRqFEKaA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5225,6 +5274,7 @@ packages:
       esbuild: 0.18.18
       postcss: 8.4.27
       rollup: 3.27.2
+      sass: 1.69.5
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

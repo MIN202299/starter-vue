@@ -73,6 +73,16 @@ watch(playHeadShake, (val) => {
   }
 })
 
+onMounted(() => {
+  const token = window.localStorage.getItem('token')
+  if (token) {
+    const payload = JSON.parse(atob(token.split('.')[1]))
+    payload.phone === '19550114082'
+      ? router.push('/writeOff')
+      : router.push('/home')
+  }
+})
+
 onBeforeUnmount(() => {
   if (timer)
     clearInterval(timer)
