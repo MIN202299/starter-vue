@@ -16,6 +16,7 @@
     "@vueuse/core": "^10.3.0",
     "axios": "^1.6.2",
     "gsap": "^3.12.4",
+    "qrcode": "^1.5.3",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5"
   },
@@ -25,6 +26,7 @@
     "@iconify-json/material-symbols": "^1.1.54",
     "@iconify-json/svg-spinners": "^1.1.2",
     "@types/node": "^20.4.8",
+    "@types/qrcode": "^1.5.5",
     "@unocss/eslint-config": "^0.55.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "add": "^2.0.6",

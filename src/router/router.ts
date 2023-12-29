@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Home = () => import('~/pages/home.vue')
 const Login = () => import('~/pages/login.vue')
 const WriteOff = () => import('~/pages/writeOff.vue')
+const Qr = () => import('~/pages/qr.vue')
 
 const routes: RouteRecordRaw[] = [
   {
@@ -21,6 +22,10 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/writeOff',
         component: WriteOff,
+      },
+      {
+        path: 'qr',
+        component: Qr,
       },
     ],
   },

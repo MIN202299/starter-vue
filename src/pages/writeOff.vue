@@ -80,7 +80,21 @@ function onScanSuccess(decodedText: string) {
   scanning.value = false
   stopScan()
   stopScanAnimation()
-  writeOff(decodedText)
+  // decodedText url 或者 券id
+  const checkLink = /^(http:\/\/|https:\/\/)/
+  let id = '123'
+  if (checkLink.test(decodedText)) {
+    const url = new URL(decodedText)
+    const params = new URLSearchParams(url.search)
+    const qrcode = params.get('couponId')
+    if (qrcode)
+      id = qrcode
+  }
+  else {
+    id = decodedText
+  }
+  console.log('couponId', id)
+  writeOff(id)
 }
 
 function onScanFailure(error: any) {
