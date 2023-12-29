@@ -15,5 +15,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div />
+  <div relative h-full w-full>
+    <div absolute bottom-0 left-0 w-full flex items-center justify-between bg-dark>
+      <img src="@/dropleton-logo.png" alt="">
+      <span text="3 white">杭州元形水滴科技创新发展有限公司 / 浙ICP备20017538号-1</span>
+    </div>
+  </div>
 </template>

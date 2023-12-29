@@ -60,10 +60,6 @@ async function handleScan() {
       camera,
       {
         fps: 10,
-        qrbox: {
-          width: 400,
-          height: 400,
-        },
       },
       onScanSuccess,
       onScanFailure,
@@ -223,6 +219,11 @@ async function writeOff(id: string) {
     >
       {{ !scanning ? '开始扫码' : '停止扫码' }}
     </button>
+    <div absolute bottom-0 left-0 w-full flex items-center justify-between>
+      <!-- <img src="@/dropleton-logo.png" alt=""> -->
+      <span />
+      <span text="3 white/60">杭州元形水滴科技创新发展有限公司 / 浙ICP备20017538号-1</span>
+    </div>
   </div>
 </template>
 

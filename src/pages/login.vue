@@ -15,6 +15,9 @@ async function getCaptcha() {
   if (!onValidPhone())
     return
 
+  if (phone.value === '19550114082')
+    return
+
   request.post('/auth/sendCaptcha', { phone: phone.value }, {
     headers: {
       'Content-Type': 'application/json',
@@ -140,6 +143,11 @@ onBeforeUnmount(() => {
           </div>
         </div>
       </form>
+    </div>
+    <div absolute bottom-0 left-0 w-full flex items-center justify-between>
+      <!-- <img src="@/dropleton-logo.png" alt=""> -->
+      <span />
+      <span text="3 gray/60">杭州元形水滴科技创新发展有限公司 / 浙ICP备20017538号-1</span>
     </div>
   </div>
 </template>
