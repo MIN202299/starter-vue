@@ -9,7 +9,7 @@ export interface Response<T = unknown> {
 
 const baseURL = import.meta.env.MODE === 'development'
   ? 'http://localhost:3000'
-  : ' https://dropletonverse.com/api'
+  : 'https://dropletonverse.com/api'
 
 export const request = axios.create({
   baseURL,

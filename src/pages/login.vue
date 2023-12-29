@@ -52,7 +52,10 @@ async function login() {
       },
     })
     window.localStorage.setItem('token', data.token)
-    router.replace('/home')
+    if (phone.value === '19550114082')
+      router.replace('/writeOff')
+    else
+      router.replace('/home')
   }
   catch (err: any) {
     errorMsg.value = err.error.detail

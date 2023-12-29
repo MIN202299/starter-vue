@@ -32,7 +32,7 @@ function cb(err: any) {
       </div>
       <canvas ref="canvas" ma aspect-square w-full :class="couponId ? '' : 'display-none'" />
       <div text="center ">
-        <span v-if="couponId" class="text-black/90">券码：{{ couponId }}</span>
+        <span v-if="couponId" class="text-black/90">立享七折优惠</span>
         <span v-else text-red-500>找不到优惠券</span>
       </div>
     </div>

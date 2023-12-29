@@ -5,6 +5,7 @@ module.exports = {
   ],
   ignorePatterns: [
     '*.svg',
+    '*.jpg',
   ],
   rules: {
     'no-console': 'off',

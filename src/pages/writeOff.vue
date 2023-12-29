@@ -23,7 +23,6 @@ import { Html5Qrcode } from 'html5-qrcode'
 import gsap from 'gsap'
 import type { Response } from '~/api/index'
 import { request } from '~/api/index'
-import router from '~/router/router'
 
 const render$ = ref<HTMLDivElement>(null!)
 onMounted(() => {
@@ -41,7 +40,14 @@ const loading = ref(false)
 const errorMsg = ref('')
 let html5QrCode: Html5Qrcode
 let devices: Device[]
+
+const router = useRouter()
+
 onMounted(() => {
+  const token = window.localStorage.getItem('token')
+  if (!token)
+    router.replace('/login')
+
   html5QrCode = new Html5Qrcode('render-container')
 })
 async function handleScan() {
@@ -236,7 +242,7 @@ async function writeOff(id: string) {
     <div absolute bottom-0 left-0 w-full flex items-center justify-between>
       <!-- <img src="@/dropleton-logo.png" alt=""> -->
       <span />
-      <span text="3 white/60">杭州元形水滴科技创新发展有限公司 / 浙ICP备20017538号-1</span>
+      <span text="3 gray/60">杭州元形水滴科技创新发展有限公司 / 浙ICP备20017538号-1</span>
     </div>
   </div>
 </template>
