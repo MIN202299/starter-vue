@@ -12,7 +12,7 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <Test />
-  <HelloWorld msg="Vite + Vue + Unocss" />
+  <HelloWorld msg="饮水思源,思源黑体" />
 </template>
 
 <style scoped>
